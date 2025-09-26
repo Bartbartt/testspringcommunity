@@ -38,4 +38,24 @@ public class FrogController {
         }
     }
 
+
+    // public CompletableFuture<ResponseEntity<null>> getNothing(){
+    //    return CompletableFuture<null>().thenApply(ResponseEntity::ok);
+    //}
+
+    @GetMapping("getNothing1")
+    public ResponseEntity<Void> getNothing1() {
+        return ResponseEntity.ok().build();
+    }
+
+    @GetMapping("getNothing2")
+    public CompletableFuture<ResponseEntity<Void>> getNothing2() {
+        return CompletableFuture.supplyAsync(() -> {
+            // Optional: You can add any async logic here if needed
+            return ResponseEntity.ok().build();
+        });
+    }
+
+
+
 }
