@@ -27,7 +27,7 @@ public class FrogController {
             return CompletableFuture.completedFuture(new ResponseEntity<>(HttpStatus.I_AM_A_TEAPOT));
         }
     }
-
+//hoi
     @GetMapping("getAll")
     public CompletableFuture<ResponseEntity<List<Frog>>> getAll(){
         try{
